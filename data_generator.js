@@ -44,19 +44,18 @@ var generateRandomTweet = function(){
   tweet.message = randomMessage();
   tweet.created_at = new Date();
   addTweet(tweet);
-  console.log(streams.home.length);
   $('.tweets').append('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
   if(streams.home.length > 15)
     $('.tweets li:first-child').remove();
 };
 
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 15; i++){
   generateRandomTweet();
 }
 
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 1500);
+  setTimeout(scheduleNextTweet, Math.random() * 4300);
 };
 scheduleNextTweet();
 

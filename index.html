@@ -6,31 +6,46 @@
   </head>
   <body>
    <h1>Latest Tweets</h1>
-   <buton class="update-tweets">Get New Tweets</buton>
+   <input class="new-tweet" type="text"></input>
+   <button class="send-tweet">Add Tweet</button>
    <ul class="tweets"></ul>
    
     <script>
 
       var Tweets = {};
 
+
       Tweets.update = function() {
         $('.tweets').html('');
-        var index = streams.home.length - 1;
-        console.log(index);
-        while(index >= 0){
+        var streamLength = streams.home.length;
+        var index = streams.home.length - 1 - 15;
+        while(index < streamLength ){
           var tweet = streams.home[index];
           var $tweet = $('<li>@' + tweet.user + ': ' + tweet.message + '</li>');
           //$tweet.text();
           $(".tweets").append('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
-          index -= 1;
+          index++;
         }
       };
+
+      Tweets.addTweet = function(tweet){
+        $('.tweets').append('<li><strong>' + tweet + '</strong></li>');
+        $('.new-tweet').val('');
+      };
+
+   
      
       $(document).ready(function(){
         var $body = $('body');
         Tweets.update();//load initial tweets;
         //EVENT LISTENER
-        $body.on('click', '.update-tweets', function() { Tweets.update(); });
+        $body.on('click', '.send-tweet', function() { 
+          var message = $('.new-tweet').val();
+          console.log(message);
+          Tweets.addTweet(message);
+
+        });    
+        
 
       });
 
