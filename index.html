@@ -23,13 +23,13 @@
           var tweet = streams.home[index];
           var $tweet = $('<li>@' + tweet.user + ': ' + tweet.message + '</li>');
           //$tweet.text();
-          $(".tweets").append('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
+          $(".tweets").prepend('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
           index++;
         }
       };
 
       Tweets.addTweet = function(tweet){
-        $('.tweets').append('<li><strong>' + tweet + '</strong></li>');
+        $('.tweets').prepend('<li><strong>' + tweet + '</strong></li>');
         $('.new-tweet').val('');
       };
 

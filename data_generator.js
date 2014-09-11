@@ -44,9 +44,9 @@ var generateRandomTweet = function(){
   tweet.message = randomMessage();
   tweet.created_at = new Date();
   addTweet(tweet);
-  $('.tweets').append('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
+  $('.tweets').prepend('<li>@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at + '</li>');
   if(streams.home.length > 15)
-    $('.tweets li:first-child').remove();
+    $('.tweets li:last-child').remove();
 };
 
 for(var i = 0; i < 15; i++){
