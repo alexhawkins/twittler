@@ -44,7 +44,7 @@
 
  $(document).ready(function() {
      var $body = $('body');
-     //Tweets.latestTweets(); //load initial tweets;
+     Tweets.latestTweets(); //load initial tweets;
      //EVENT LISTENERS
      $('.buttons-select').on('click', 'button', function() {
          if (this.id === 'latest') {
