@@ -18,39 +18,32 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-md-8">
-                        <h1 class="page-header">Latest Tweets</h1>
-                        <div class="buttons-select">
-                            <button id="latest" class="btn btn-primary">Refresh Latest</button>
-                            <button id="all-tweets" class="btn btn-primary">All Tweets</button>
-                            <button id="shawndrost" class="btn btn-primary">Sean's Tweets</button>
-                            <button id="mracus" class="btn btn-primary">Marcus' Tweets</button>
-                            <button id="douglascalhoun" class="btn btn-primary">Doug's Tweets</button>
-                        </div>
-                        <div class="media">
-                            <div class="tweets">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="input-group add-my-tweet">
-                                    <input type="text" class="form-control new-tweet">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default send-tweet" type="button">Tweet!</button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
-                            </div>
-                            <!-- /.col-lg-6 -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    
+            <div class="col-md-8">
+                <h1 class="page-header">Twittler</h1>
+                <div class="buttons-select">
+                    <button id="latest" class="btn btn-primary">Refresh Latest</button>
+                    <button id="all-tweets" class="btn btn-primary">All Tweets</button>
+                    <button id="shawndrost" class="btn btn-primary">Sean's Tweets</button>
+                    <button id="mracus" class="btn btn-primary">Marcus' Tweets</button>
+                    <button id="douglascalhoun" class="btn btn-primary">Doug's Tweets</button>
                 </div>
-                <div class="panel-footer">Copyright © 2015 — Alex Hawkins</div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="input-group add-my-tweet">
+                            <input type="text" class="form-control new-tweet" placeholder="@annoymous">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default send-tweet" type="button">Tweet!</button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                    <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+                <div class="media">
+                    <div class="tweets">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -58,6 +51,9 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="moment.js"></script>
+    <script>
+    </script>
     <script src="tweets.js"></script>
     <script src="data_generator.js"></script>
 </body>
