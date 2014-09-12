@@ -7,6 +7,7 @@
 window.streams = {};
 streams.home = [];
 streams.users = {};
+streams.users.anonymous = [];
 streams.users.shawndrost = [];
 streams.users.sharksforcheap = [];
 streams.users.mracus = [];
@@ -85,7 +86,7 @@ var generateRandomTweet = function(){
  
 };
 
-for(var i = 0; i < 15; i++){
+for(var i = 0; i < 10; i++){
   generateRandomTweet();
 }
 
